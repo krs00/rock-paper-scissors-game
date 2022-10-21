@@ -1,23 +1,32 @@
 
-// This function generates random number between 1-3 for Computer Choice variable
-function getComputerChoice(max) {
-    return Math.floor(Math.random() * 3) + 1;   
+// -------- COMPUTER CHOICE GENERATOR --------------- 
+
+// Returns a random string of rock paper or scissors
+function getComputerChoice() {
+    // Math.floor generates random number between 1 and 3 and stores it inside computerChoice variable
+    let computerChoice = Math.floor(Math.random() * 3) + 1;
+    // If else statment returns rock, paper, or scissors based of computerChoice number value
+    if (computerChoice === 1) {
+        return 'rock';
+    }
+    else if (computerChoice === 2) {
+        return 'paper';
+    }
+    else if (computerChoice === 3) {
+        return 'scissors' 
+    }
   }
-// Random 1-3 number get stored in computerChoice variable 
-computerChoice = getComputerChoice();
-// computerChoice variable gets assigned corresponding string value
-// 1 = rock  2 = paper  3 = scissors'
-if (computerChoice === 1) {
-    computerChoice = "rock" 
+
+// -------- COMPUTER CHOICE GENERATOR ---------------
+
+// -------- PLAY ROUND -----------------------------
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return 'It\'s a tie! shoot again!' 
+    }
+
 }
-else if (computerChoice === 2) {
-    computerChoice = "paper"
-}
-else
-    computerChoice = "scissors"
 
-console.log(computerChoice)
-
-
-  
+const computerSelection = getComputerChoice();   
 
