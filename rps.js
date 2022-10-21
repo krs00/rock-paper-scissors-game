@@ -21,12 +21,28 @@ function getComputerChoice() {
 
 // -------- PLAY ROUND -----------------------------
 
+// function accepts players selection and computer selection
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return 'It\'s a tie! shoot again!' 
+        return `It's a tie! You both picked ${playerSelection}!`
+    }
+    else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return 'You win! rock beats scissors!' 
+    }
+    else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return 'You win! paper beats rock!'
+    }
+    else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return 'You win! scissors beats paper!'
+    }
+    else {
+        return `You lose! ${computerSelection} beats ${playerSelection}!` 
     }
 
 }
+// ----------- PLAY ROUND -----------------------------------
+const computerSelection = getComputerChoice();
+const playerSelection = prompt()
 
-const computerSelection = getComputerChoice();   
+console.log(playRound(playerSelection, computerSelection)) 
 
