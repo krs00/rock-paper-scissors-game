@@ -19,6 +19,14 @@ function getComputerChoice() {
 
 // -------- COMPUTER CHOICE GENERATOR ---------------
 
+// -------- GET PLAYER CHOICE -----------------------
+function getPlayerChoice() {
+    const playerChoice = prompt('Choose rock, paper or scissors!');
+    const result = playerChoice.toLowerCase();
+    return result; 
+}
+
+
 // -------- PLAY ROUND -----------------------------
 
 // function accepts players selection and computer selection
@@ -42,7 +50,7 @@ function playRound(playerSelection, computerSelection) {
 }
 // ----------- PLAY ROUND -----------------------------------
 const computerSelection = getComputerChoice();
-const playerSelection = prompt()
+const playerSelection = getPlayerChoice();
 
 console.log(playRound(playerSelection, computerSelection)) 
 
