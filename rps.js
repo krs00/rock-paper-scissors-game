@@ -25,63 +25,77 @@ function playerInput() {
     else
         console.log("Please choose rock, paper or scissors!")
 }
-    
-// Store userInput and computerInput inside variables
-
-const computerChoice = computerInput();
-const playerChoice = playerInput();
-
-
-
+// INITIALIZE COMPUTER SCORE AND PLAYER SCORE
+let computerScore = 0;
+let playerScore = 0;
 // Write function that plays a single round of rock paper scissors
 
-// IF THE PLAYER WINS 
-function playRound() {
-    if (playerChoice === computerChoice) {
-        console.log(`The computer chose ${computerChoice}`);
-        console.log(`You chose ${playerChoice}`);  
-        console.log("It's a tie!"); 
+// IF THE PLAYER WINS  
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) { 
+        return "It's a tie!"; 
     }
     else if (playerChoice == 'rock' && computerChoice == 'scissors') {
-        console.log(`The computer chose ${computerChoice}`);
-        console.log(`You chose ${playerChoice}`);  
-        console.log("You win! Rock beats scissors!"); 
+        playerScore++;
+        return "You win! Rock beats scissors!";
     }
     else if (playerChoice == 'paper' && computerChoice == 'rock') {
-        console.log(`The computer chose ${computerChoice}`);
-        console.log(`You chose ${playerChoice}`);  
-        console.log("You win! Paper beats rock!"); 
+        playerScore++;
+        return "You win! Paper beats rock!";
     }
     else if (playerChoice == 'scissors' && computerChoice == 'paper') {
-        console.log(`The computer chose ${computerChoice}`);
-        console.log(`You chose ${playerChoice}`);  
-        console.log("You win! Scissors beats paper!");  
+        playerScore++;
+        return "You win! Scissors beats paper!";
     }
     // IF THE PLAYER ENTERS UNDEFINED VALUE 
     else if (playerChoice === undefined) { 
-        return
+        
     }
     // IF THE PLAYER LOOSES
     else if (playerChoice == 'rock' && computerChoice == 'paper') {
-        console.log(`The computer chose ${computerChoice}`);
-        console.log(`You chose ${playerChoice}`);  
-        console.log("You loose! Paper beats rock!");
-}
+        computerScore++;
+        return "You lose! Paper beats rock!";
+    }
     else if (playerChoice == 'paper' && computerChoice == 'scissors') {
-        console.log(`The computer chose ${computerChoice}`);
-        console.log(`You chose ${playerChoice}`);  
-        console.log("You loose! Scissors beats paper!");
-}
+        computerScore++;
+        return "You lose! Scissors beats paper!";
+        
+    }
     else if (playerChoice == 'scissors' && computerChoice == 'rock') {
-        console.log(`The computer chose ${computerChoice}`);
-        console.log(`You chose ${playerChoice}`);  
-        console.log("You loose! Rock beats scissors!"); 
+        computerScore++;
+        return "You lose! Rock beats scissors!";
+    }
 }
+ 
 
-}
+function game() {
+    for (let i = 0; i < 5; i++) {
 
-playRound();
+        const computerChoice = computerInput();
+        const playerChoice = playerInput(); 
 
+        console.log("The computer choose: "+ computerChoice+"\nYou choose: "+ playerChoice);
+        let returned = playRound(playerChoice, computerChoice); 
+        console.log(returned+"\n"); 
+    }
+
+
+
+    // END OF GAME TEXT
+    if (playerScore == computerScore) {
+        console.log("Player score: "+ playerScore +"\nComputer score: "+computerScore 
+                     +"\nThe Game is tie");
+    }
+    else if(playerScore > computerScore){
+        console.log("Player score: "+playerScore +"\nComputer score: "+computerScore 
+        +"\nYou win the game!"); 
+    }
+    else if(computerScore > playerScore){
+        console.log("Player score: "+playerScore +"\nComputer score: "+computerScore 
+        +"\nThe machines have won ... ");
+    }
+} 
+game();
 
 
  
