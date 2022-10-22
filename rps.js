@@ -91,7 +91,7 @@ function game() {
     }
     else if(computerScore > playerScore){
         console.log("Player score: "+playerScore +"\nComputer score: "+computerScore 
-        +"\nThe machines have won ... ");
+        +"\nYou lose"+"\nThe machines have won ... ");  
     }
 } 
 game();
