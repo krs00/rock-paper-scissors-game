@@ -16,3 +16,14 @@ function computerChoice() {
 
 }
 
+// Get userChoice
+// User choice must be converted to lower case to neutralize string input
+// User input must be validated as a legal option to return choice (through if else)
+
+function playerChoice() {
+    let playerChoice = prompt("Choose rock paper, or scissors!").toLowerCase();
+    if (playerChoice === "rock" ||  playerChoice === "paper" || playerChoice === "scissors" )
+    return;
+    else
+    console.log("Please type in rock, paper or scissors!")
+}
