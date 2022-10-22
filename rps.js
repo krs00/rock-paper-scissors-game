@@ -80,7 +80,7 @@ function game() {
 
 
 
-    // END OF GAME TEXT
+// END OF GAME TEXT
     if (playerScore == computerScore) {
         console.log("Player score: "+ playerScore +"\nComputer score: "+computerScore 
                      +"\nThe Game is tie");
