@@ -27,3 +27,8 @@ function playerChoice() {
     else
     console.log("Please type in rock, paper or scissors!")
 }
+
+// Initialize score variables for player and computer
+
+let playerScore = 0;
+let computerScore = 0;
