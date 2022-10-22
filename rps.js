@@ -21,9 +21,7 @@ function computerInput() {
 function playerInput() {  
     let playerInput = prompt("Choose rock, paper or scissors!").toLowerCase();
     if (playerInput === "rock" || playerInput === "paper" || playerInput === "scissors") 
-        return playerInput;
-    else
-        console.log("Please choose rock, paper or scissors!")
+        return playerInput; 
 }
 // INITIALIZE COMPUTER SCORE AND PLAYER SCORE
 let computerScore = 0;
@@ -49,6 +47,7 @@ function playRound(playerChoice, computerChoice) {
     }
     // IF THE PLAYER ENTERS UNDEFINED VALUE 
     else if (playerChoice === undefined) { 
+        return "Please choose rock, paper or scissors"
         
     }
     // IF THE PLAYER LOOSES
@@ -67,7 +66,7 @@ function playRound(playerChoice, computerChoice) {
     }
 }
  
-
+// THIS FUNCTION WILL REPEAT SINGLE ROUND 5 TIMES
 function game() {
     for (let i = 0; i < 5; i++) {
 
