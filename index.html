@@ -13,12 +13,41 @@
     <header>
         <h1>ROCK PAPER SCISSORS</h1>
     </header>
-    <main></main>
-    <footer>
+    <main>
+        <!--SCOREBOARD SECTION-->
+        <div id="scoreboard">
+            <h2></h2> 
+        </div>
+        <!--PLAYER SECTION BELOW-->
+        <div id="playerSection">
+            <h3 class="playerChoice"></h3> 
+            <h3 class="playerScoreDisplay">Your score: <span class="yourScore"></span></h3>  
+            <div id="playerImgs"> 
+                <img src="/img/rock.png" alt="it a rock" class="button" id="rock">
+                <img src="/img/paper.png" alt="it a paper" class="button" id="paper">
+                <img src="/img/scissors.png" alt="it a scissors" class="button" id="scissors">
+            </div> 
+        </div> 
+        <!--COMPUTER SECTION BELOW-->
+        <div id="computerSection">
+            <h3 class="computerChoice"></h3>
+            <h3 class="computerScoreDisplay">Computer Score: <span class=" compScore"></span></h3>  
+            <div id="computerImgs"> 
+                <img src="/img/rock.png" alt="it a rock">
+                <img src="/img/paper.png" alt="it a paper">
+                <img src="/img/scissors.png" alt="it a scissors">
+            </div> 
+        </div>
+        <div class="results" id="results-div">
+            <h2 id="results"></h2> 
+        </div>
+    </main>
+    <!--FOOTER SECTION-->
+    <footer> 
     </footer>
 
 
-
+    <!--JAVASCRIPT-->
     <script src="rps.js"></script> 
 </body>
 </html> 
