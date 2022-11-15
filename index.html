@@ -14,33 +14,34 @@
         <h1>ROCK PAPER SCISSORS</h1>
     </header>
     <main>
-        <!--SCOREBOARD SECTION-->
-        <div id="scoreboard">
-            <h2></h2> 
-        </div>
+        <div class="gameSec">
         <!--PLAYER SECTION BELOW-->
         <div id="playerSection">
-            <h3 class="playerChoice"></h3> 
-            <h3 class="playerScoreDisplay">Your score: <span class="yourScore"></span></h3>  
-            <div id="playerImgs"> 
-                <img src="/img/rock.png" alt="it a rock" class="button" id="rock">
-                <img src="/img/paper.png" alt="it a paper" class="button" id="paper">
-                <img src="/img/scissors.png" alt="it a scissors" class="button" id="scissors">
+            <h3 class="playerChoice center">Choose your weapon!</h3> 
+            <h3 class="playerScoreDisplay center">Your score:<span class="yourScore"></span></h3>  
+            <div id="playerImgs" class="center"> 
+                <img src="/img/rock.png" alt="it a rock" class="button rockBtn" id="rock">
+                <img src="/img/paper.png" alt="it a paper" class="button paperBtn" id="paper">
+                <img src="/img/scissors.png" alt="it a scissors" class="button scissorsBtn" id="scissors">
             </div> 
         </div> 
         <!--COMPUTER SECTION BELOW-->
         <div id="computerSection">
-            <h3 class="computerChoice"></h3>
-            <h3 class="computerScoreDisplay">Computer Score: <span class=" compScore"></span></h3>  
-            <div id="computerImgs"> 
-                <img src="/img/rock.png" alt="it a rock">
-                <img src="/img/paper.png" alt="it a paper">
-                <img src="/img/scissors.png" alt="it a scissors">
+            <h3 class="computerChoice center">⊛ Computer play ⊛</h3>
+            <h3 class="computerScoreDisplay center">Computer Score:<span class="compScore"></span></h3>  
+            <div id="computerImgs" class="center"> 
+                <img src="/img/rock_comp.png" alt="it a rock">
+                <img src="/img/paper_comp.png" alt="it a paper">
+                <img src="/img/scissors_comp.png" alt="it a scissors">
             </div> 
         </div>
-        <div class="results" id="results-div">
+        </div>
+        <div class="results center" id="results-div">
             <h2 id="results"></h2> 
         </div>
+        <div class="center">
+            <button class="resetBtn invis">Play Again?</button>
+        </div> 
     </main>
     <!--FOOTER SECTION-->
     <footer> 

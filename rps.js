@@ -3,11 +3,12 @@
 const rockBtn = document.querySelector('.rockBtn')
 const paperBtn = document.querySelector('.paperBtn')
 const scissorsBtn = document.querySelector('.scissorsBtn')
+const resetBtn = document.querySelector('.resetBtn')
 
 rockBtn.addEventListener('click', getPlayerChoice)
 paperBtn.addEventListener('click', getPlayerChoice)
 scissorsBtn.addEventListener('click', getPlayerChoice) 
-
+resetBtn.addEventListener('click',() => location.reload());
 
 
 const results = document.getElementById('results') 
@@ -36,7 +37,7 @@ let rounds = 0;
 
 function computerChoice() {
     let random = Math.floor(Math.random() * 3)+1;
-    if (random === 1) {
+    if (random === 1) { 
         return "rock"; 
     }
     else if (random === 2) {
@@ -109,12 +110,14 @@ function playRound(playerChoice, computerChoice) {
 
     if(computerScore === 5) {
         results.style.color = 'red'
-        results.textContent = "You lost the game to the Computer ...";
+        results.textContent = "The machines have won ...";
+        resetBtn.classList.remove('invis')
     }
 
     if(playerScore === 5) {
         results.style.color = 'green'
         results.textContent = "You have won the game!";
+        resetBtn.classList.remove('invis')
     }
 
     }
